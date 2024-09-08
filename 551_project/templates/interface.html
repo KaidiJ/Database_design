@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Interface</title>
+</head>
+<body>
+    <h1>Welcome to the {{ db_choice }} Database Interface</h1>
+    <form action="{{ url_for('execute') }}" method="post">
+        <input type="text" name="command" placeholder="Enter command">
+        <input type="text" name="limit" placeholder="Limit (optional)">
+        <input type="text" name="condition" placeholder="Condition (optional)">
+        <input type="text" name="columns" placeholder="Columns (comma-separated, optional)">
+        <input type="submit" value="Execute">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

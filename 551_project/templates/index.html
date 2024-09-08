@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Selector</title>
+</head>
+<body>
+    <h1>Select Database</h1>
+    <form action="/switch_db" method="post">
+        <input type="radio" id="json_db" name="database_choice" value="JSON">
+        <label for="json_db">JSON Database</label><br>
+        <input type="radio" id="sql_db" name="database_choice" value="SQL">
+        <label for="sql_db">SQL Database</label><br>
+        <input type="submit" value="Choose">
+    </form>
+</body>
+</html>

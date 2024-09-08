@@ -1,0 +1,30 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Command Result</title>
+</head>
+<body>
+    <h1>Command Result</h1>
+    {% if result %}
+        {% if result is string %}
+            <p>{{ result }}</p>
+        {% else %}
+            <table>
+                {% for row in result %}
+                    <tr>
+                        {% for key, value in row.items() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    {% else %}
+        <p>Command execution failed</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
+
